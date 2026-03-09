@@ -90,6 +90,11 @@ APP_HOME=$( cd -P "${APP_HOME:-./}" > /dev/null && printf '%s\n' "$PWD" ) || exi
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD=maximum
+PROJECT_JAVA_HOME='/c/Program Files/Java/jdk-21.0.10'
+
+if [ -x "$PROJECT_JAVA_HOME/bin/java" ] ; then
+    JAVA_HOME=$PROJECT_JAVA_HOME
+fi
 
 warn () {
     echo "$*"
